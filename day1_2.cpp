@@ -2,7 +2,7 @@
 #include <vector>
 
 int input[] = {
-#include "day1_input.txt"
+#include "inputs/day1.txt"
 };
 
 void main()

@@ -14,7 +14,7 @@ struct Input
 };
 
 Input input[] = {
-#include "day2_input.txt"
+#include "inputs/day2.txt"
 };
 
 void main()
