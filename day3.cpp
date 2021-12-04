@@ -7,6 +7,57 @@ const char *input[] = {
 #include "inputs/day3.txt"
 };
 
+std::string find_common_bitstring(char want_most_common)
+{
+    std::string out = "";
+    for (int place = 0; place < 12; place++)
+    {
+        uint32_t one_count = 0;
+        uint32_t zero_count = 0;
+        uint32_t last_index = 0;
+        for (int i = 0; i < sizeof(input) / sizeof(const char *); i++)
+        {
+            bool has_it = true;
+            for (int j = 0; j < out.size(); j++)
+            {
+                if (input[i][j] != out[j])
+                {
+                    has_it = false;
+                    break;
+                }
+            }
+            if (has_it)
+            {
+                if (input[i][place] == '1')
+                {
+                    one_count++;
+                }
+                else
+                {
+                    zero_count++;
+                }
+                last_index = i;
+            }
+        }
+        if (one_count + zero_count == 1)
+        {
+            return input[last_index];
+        }
+        if (one_count == zero_count)
+        {
+            out += want_most_common ? '1' : '0';
+        }
+        else if (one_count > zero_count)
+        {
+            out += want_most_common ? '1' : '0';
+        }
+        else if (zero_count > one_count)
+        {
+            out += want_most_common ? '0' : '1';
+        }
+    }
+    return out;
+}
 void main()
 {
     int counts[12] = {};
@@ -41,6 +92,7 @@ void main()
         }
         std::cout << counts[place] << ", ";
     }
+
     std::cout << "gamma: " << gamma << " epsilon: " << epsilon << "\n";
     {
         //copy paste values from command line in here and let the compiler do the binary->decimal conversion for me.
@@ -55,6 +107,8 @@ void main()
     int oxy = 0b101110111101;
     int co2 = 0b011001010000;
     std::cout << "final co2 * oxy: " << std::to_string(oxy * co2) << "\n";
+
+    std::cout << "co2 binary: " << find_common_bitstring(true) << " oxy binary: " << find_common_bitstring(false);
 
     // std::cout << "final: " < <  < < "\n";
 }
