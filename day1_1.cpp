@@ -5,7 +5,7 @@ int input[] = {
 #include "inputs/day1.txt"
 };
 
-void main()
+int main()
 {
     int count = 0;
     for (int i = 0; i < sizeof(input) / 4 - 3; i++)
@@ -16,4 +16,5 @@ void main()
         }
     }
     std::cout << count << "\n";
+    return 0;
 }

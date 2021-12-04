@@ -58,7 +58,7 @@ std::string find_common_bitstring(char want_most_common)
     }
     return out;
 }
-void main()
+int main()
 {
     int counts[12] = {};
 
@@ -95,7 +95,7 @@ void main()
 
     std::cout << "gamma: " << gamma << " epsilon: " << epsilon << "\n";
     {
-        //copy paste values from command line in here and let the compiler do the binary->decimal conversion for me.
+        // copy paste values from command line in here and let the compiler do the binary->decimal conversion for me.
         int gamma = 0b010000110001;
         int epsilon = 0b101111001110;
         std::cout << "gamma: " << std::to_string(gamma) << " epsilon: " << std::to_string(epsilon) << "\n";
@@ -111,4 +111,5 @@ void main()
     std::cout << "co2 binary: " << find_common_bitstring(true) << " oxy binary: " << find_common_bitstring(false);
 
     // std::cout << "final: " < <  < < "\n";
+    return 0;
 }

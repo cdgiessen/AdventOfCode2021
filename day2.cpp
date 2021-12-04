@@ -17,10 +17,10 @@ Input input[] = {
 #include "inputs/day2.txt"
 };
 
-void main()
+int main()
 {
     int aim = 0;
-    int depth = 0; //down is up eg higher x == deeper
+    int depth = 0; // down is up eg higher x == deeper
     int position_horiz = 0;
     for (int i = 0; i < sizeof(input) / sizeof(Input); i++)
     {
@@ -40,4 +40,5 @@ void main()
     }
     std::cout << "aim: " << aim << " depth: " << depth << " position_horiz: " << position_horiz << "\n";
     std::cout << "final: " << depth * position_horiz << "\n";
+    return 0;
 }
