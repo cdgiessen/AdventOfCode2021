@@ -1,3 +1,4 @@
+cmake_minimum_required(VERSION 3.16)
 project(AdventOfCode2021)
 
 set (CMAKE_CXX_STANDARD 20)
@@ -15,3 +16,7 @@ add_executable(day10 src/day10.cpp)
 add_executable(day11 src/day11.cpp)
 add_executable(day12 src/day12.cpp)
 add_executable(day13 src/day13.cpp)
+add_executable(day14 src/day14.cpp)
+
+target_compile_options(day14 PUBLIC -fsanitize=undefined)
+target_link_options(day14 PUBLIC -fsanitize=undefined)
