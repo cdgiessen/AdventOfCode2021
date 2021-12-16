@@ -2,7 +2,7 @@
 #include <vector>
 #include <array>
 
-std::array input = {
+std::array<int, 2000> input = {
 #include "inputs/day1.txt"
 };
 

@@ -5,14 +5,14 @@
 #include <array>
 #include <algorithm>
 
-std::array inputs = {
+std::array<int, 1000> inputs = {
 #include "inputs/day7.txt"
 };
 
 int main()
 {
-    int min = INT_MAX;
-    int max = INT_MIN;
+    int min = 10000000;
+    int max = 0;
     int sum = 0;
     for (auto &i : inputs)
     {
@@ -23,7 +23,7 @@ int main()
         sum += i;
     }
     std::cout << "avg: " << sum / inputs.size() << "\n";
-    int min_cost = INT_MAX;
+    int min_cost = 100000;
     for (int i = min; i < max; i++)
     {
         int fuel_cost = 0;
@@ -33,7 +33,7 @@ int main()
             min_cost = fuel_cost;
     }
     std::cout << "min fuel const cost: " << min_cost << "\n";
-    min_cost = INT_MAX;
+    min_cost = 100000;
     for (int i = min; i < max; i++)
     {
         int fuel_cost = 0;

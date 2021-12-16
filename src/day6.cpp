@@ -5,7 +5,7 @@
 #include <array>
 #include <algorithm>
 
-std::array inputs = {
+std::array<int, 300> inputs = {
 #include "inputs/day6.txt"
 };
 const bool debug = true;
