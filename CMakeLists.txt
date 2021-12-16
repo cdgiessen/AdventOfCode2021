@@ -17,6 +17,8 @@ add_executable(day11 src/day11.cpp)
 add_executable(day12 src/day12.cpp)
 add_executable(day13 src/day13.cpp)
 add_executable(day14 src/day14.cpp)
+add_executable(day15 src/day15.cpp)
+add_executable(day16 src/day16.cpp)
 
 target_compile_options(day14 PUBLIC -fsanitize=undefined)
 target_link_options(day14 PUBLIC -fsanitize=undefined)

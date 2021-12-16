@@ -20,10 +20,6 @@ namespace std
             using std::size_t;
             using std::string;
 
-            // Compute individual hash values for first,
-            // second and third and combine them using XOR
-            // and bit shifting:
-
             return p.y * 10000 + p.x;
         }
     };
