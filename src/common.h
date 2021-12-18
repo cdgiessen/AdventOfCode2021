@@ -10,6 +10,7 @@
 #include <unordered_map>
 #include <queue>
 #include <compare>
+#include <variant>
 
 struct Point
 {

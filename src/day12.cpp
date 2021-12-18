@@ -67,6 +67,7 @@ bool is_big(CN cn)
         return false;
     if (cn == LF)
         return true;
+    return false;
 }
 
 const char *str(CN cn)
@@ -97,6 +98,7 @@ const char *str(CN cn)
         return "mq";
     if (cn == LF)
         return "LF";
+    return "";
 }
 
 bool can_traverse_p1(std::vector<CN> const &route, CN p)
