@@ -9,19 +9,16 @@ enum class Type
     literal = 4,
 };
 
-using Data = std::variant<int>;
-
-struct Packet
+struct PacketHeader
 {
     int8_t version;
     Type type;
-    std::vector<int> data;
 };
 
 int main()
 {
 
-    for (auto c : bits)
+    for (int i = 0; i < bits.size(); i++)
     {
     }
     return 0;

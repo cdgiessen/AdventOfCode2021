@@ -4,6 +4,7 @@
 #include <vector>
 #include <math.h>
 #include <string>
+#include <string_view>
 #include <array>
 #include <algorithm>
 #include <unordered_set>
@@ -11,6 +12,10 @@
 #include <queue>
 #include <compare>
 #include <variant>
+#include <tuple>
+#include <stack>
+
+#include <assert.h>
 
 struct Point
 {
